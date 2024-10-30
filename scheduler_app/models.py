@@ -41,6 +41,7 @@ class MeetingBooking(models.Model):
     venue = models.CharField(max_length=50, default='online')  # Venue, default is 'online'
     mandatory_attendees = models.TextField()  # List of mandatory attendees
     optional_attendees = models.TextField(blank=True, null=True)  # List of optional attendees
+    status = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)  # Automatically set at creation
     updated_at = models.DateTimeField(auto_now=True)  # Automatically updated on modification
 
